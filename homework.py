@@ -50,9 +50,8 @@ names_list = ['   amy', 'Briant', 'Ryan ', ' Alex', 'steve', '  ']
 #expected output = ['Amy', 'Alex']
 
 def comp(list):
-    return [name.strip().title() for name in list]
-
-print([x for x in comp(names_list) if x.startswith('A')])
+    return [x.strip().title() for x in list if x.strip().startswith('A') or x.strip().startswith('a')]
+print(comp(names_list))
 
 
 
